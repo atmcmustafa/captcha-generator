@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #4db2ec;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f7f7f7;
+    padding: 25px 35px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.card {
+    width: 100%;
+}
+
+.captcha-wrapper {
+    display: flex;
+    height: 65px;
+    width: 100%;
+    position: relative;
+}
+.captcha-wrapper .captcha-text {
+    position: absolute;
+    left: 50%;
+    color: #fff;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    margin-left: -30px;
+    font-size: 32px;
+    user-select: none;
+}
+
+
+
+.captcha-wrapper img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    margin-right: 10px;
+    opacity: .7;
+}
+
+.captcha-wrapper button {
+    height: 100%;
+    width: 100px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #4db2ec;
+    color: #fff;
+    font-size: 24px;
+}
+
+.enter-cap {
+    width: 100%;
+    position: relative;
+}
+
+.enter-cap input {
+    width: 100%;
+    height: 45px;
+    outline: 0;
+    border: 2px solid #4db2ec;
+    border-radius: 3px;
+    font-size: 18px;
+    margin: 15px 0;
+    padding: 0 15px;
+}
+
+.captcha-result {
+    font-size: 24px;
+    text-align: center;
+    color: #4db2ec;
+    font-weight: bold;
+    display: none;
+}
+.enter-cap button {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    line-height: 32.5px;
+    border-radius: 5px;
+    background: #4db2ec;
+    border: 0;
+    outline:0;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 25px;
+    transform: translateY(-50%);
+} 
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #4db2ec;
+    font-size: 32px;
+}
+
+@media (max-width:768px){
+    .wrapper {
+        max-width: 350px;
+    }
+
+    .captcha-wrapper .captcha-text {
+        margin-left: -40px;
+  
+    }
+    
+    
+}
+
+
+.loader {
+    display: none;
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 60px;
+    height: 60px;
+    margin: 15px auto;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
